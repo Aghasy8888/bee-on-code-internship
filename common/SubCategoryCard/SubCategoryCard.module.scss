@@ -1,0 +1,26 @@
+@import '/app/variables.module.scss';
+
+.button {
+  @include set-font-size-weight(16px, 600);
+  text-transform: capitalize;
+  color: $gray-3;
+}
+
+.button.active {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    @include set-width-height(132px, 6px);
+    border-radius: 25px;
+    background-color: $blue;
+    left: -45px;
+    bottom: -11px;
+  }
+}
+
+.button.active.fromAddProductModal {
+  &::after {
+    bottom: -10px;
+  }
+}

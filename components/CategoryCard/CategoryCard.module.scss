@@ -1,0 +1,24 @@
+@import '/app/variables.module.scss';
+
+.categoryCard {
+  @include flex-center;
+  flex-direction: column;
+  gap: 5px;
+  @include set-width-height(140px, 80px);
+  @include containerStyles_2($shadow-color);
+  border-width: 2px;
+  border-color: $gray;
+  .categoryImg {
+    border-radius: 5px;
+  }
+  p {
+    @include set-font-size-weight(12px, 500);
+    text-transform: capitalize;
+    color: $black-2;
+    text-align: center;
+  }
+}
+
+.categoryCard.active {
+  border: solid 2px $gray;
+}

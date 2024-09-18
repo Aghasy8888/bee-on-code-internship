@@ -1,0 +1,19 @@
+@import '/app/variables.module.scss';
+
+.inputCtn {
+  input.nameInput {
+    display: block;
+    width: 100%;
+    border-bottom: solid $gray-4 1px;
+    padding-bottom: 8px;
+  }
+  .error {
+    @include errorStyles;
+  }
+}
+
+.articleNumberLabel, .priceLabel {
+  display: block;
+  margin-bottom: 30px;
+}
+

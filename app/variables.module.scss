@@ -1,0 +1,122 @@
+//Colors
+$white: #fff;
+$white-60: rgba(211, 200, 200, 0.6);
+$gray: #939393;
+$gray-2: #d9d9d9;
+$gray-3: #4f4f4f;
+$gray-4: #c1c1c1;
+$gray-5: #d3d3d3;
+$black: #000;
+$black-2: #2e2e2e;
+$black-bg: #252525;
+$black-border: #1f1617;
+$shadow-color: rgba(0, 0, 0, 0.25);
+$shadow-color-2: rgba(0, 0, 0, 0.15);
+$blue: #0008c1;
+$red: red;
+
+// mixins
+@mixin set-font-size-weight($fontSize, $fontWeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}
+@mixin set-width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin flex-column($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+@mixin flex-start {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+//Containers
+@mixin containerStyles {
+  margin: 0 50px;
+  @media (max-width: 1200px) {
+    margin: 0 50px;
+  }
+  @media (max-width: 992px) {
+    margin: 0 50px;
+  }
+  @media (max-width: 768px) {
+    margin: 0 50px;
+  }
+  @media (max-width: 576px) {
+    margin: 0 auto;
+    max-width: 360px;
+    padding: 0 10px;
+  }
+}
+
+@mixin containerStyles_2($shadowColor) {
+  border-radius: 5px;
+  background: $white;
+  box-shadow: 0px 0px 10px 0 $shadowColor;
+}
+
+@mixin errorStyles {
+  position: absolute;
+  @include set-font-size-weight(14px, 600);
+  color: $red;
+  max-width: 160px;
+}
+
+@mixin modalBigCtnStyles {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+@mixin centerModalStyles($top, $left) {
+  top: $top;
+  left: $left;
+  transform: translate(-50%, -50%);
+}
+
+@mixin addButtonStyles {
+  width: 100%;
+  border-radius: 25px;
+  background: $blue;
+  text-transform: capitalize;
+  color: $white;
+  padding: 10px 0;
+  margin-top: 22px;
+}
+
+@mixin nextImageWidth100 {
+  position: relative;
+  .image {
+    width: 100%;
+    height: 100%;
+    position: relative !important;
+    object-fit: cover; // Optional
+  }
+}

@@ -1,0 +1,35 @@
+@import '/app/variables.module.scss';
+
+.singleProduct {
+  @include flex-column(0);
+  justify-content: space-between;
+  max-width: 194px;
+  @include set-width-height(auto, 170px);
+  border-radius: 5px;
+  background: $white;
+  padding: 10px;
+  @media (max-width: 576px) {
+    min-width: 194px;
+    margin: 0 auto;
+  }
+  .articleNumberAndPrice {
+    display: flex;
+    justify-content: space-between;
+    p {
+      @include set-font-size-weight(14px, 500);
+      text-transform: capitalize;
+      color: $black-2;
+    }
+    p.price {
+      font-weight: 600;
+    }
+  }
+  .imgContainer {
+    display: flex;
+    height: 114px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    @include nextImageWidth100;
+  }
+}

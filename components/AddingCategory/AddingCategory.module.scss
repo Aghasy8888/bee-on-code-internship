@@ -1,0 +1,18 @@
+@import '/app/variables.module.scss';
+
+.addingCategory {
+  width: 90%;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  .addCategoryBtn {
+    min-width: 50px;
+    height: 80px;
+    border-width: 1px;
+    border-color: $black-border;
+    @include containerStyles_2($shadow-color);
+  }
+  .addCategoryBtn.z_1 {
+    z-index: 2;
+  }
+}
