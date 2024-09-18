@@ -1,0 +1,40 @@
+@import '/app/variables.module.scss';
+
+label.uploadPhoto {
+  position: relative;
+  cursor: pointer;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  @include set-width-height(100%, 145px);
+  padding: 30px 0;
+  border-radius: 5px;
+  background: $gray-5;
+  @include nextImageWidth100;
+  .error {
+    @include errorStyles;
+    bottom: -18px;
+    left: 0;
+  }
+  p {
+    @include set-font-size-weight(16px, 500);
+    text-transform: capitalize;
+    color: $white;
+  }
+}
+
+label.uploadPhoto.withImgFile {
+  padding: 0;
+  overflow: hidden;
+}
+
+label.uploadPhoto.fromAddProduct {
+  margin-top: 0;
+  height: unset;
+}
+
+.fileInput {
+  display: none;
+}

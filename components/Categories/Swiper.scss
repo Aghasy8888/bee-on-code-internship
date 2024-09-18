@@ -1,0 +1,17 @@
+@import '/app/variables.module.scss';
+
+.categorySwiper {
+  width: 90%;
+  @media (max-width: 576px) {
+    width: 47%;
+  }
+
+  .swiper-horizontal {
+    padding: 0;
+    height: 80px;
+  }
+
+  .swiper-wrapper {
+    top: 0;
+  }
+}

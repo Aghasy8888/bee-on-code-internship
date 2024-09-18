@@ -1,0 +1,14 @@
+@import '/app/variables.module.scss';
+
+  .imgContainer {
+    width: unset;
+    .swiper-horizontal {
+      padding: 0;
+      height: unset;
+      z-index: 0;
+    }
+
+    .swiper-wrapper {
+      top: 0;
+    }
+  }

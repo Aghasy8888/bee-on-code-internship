@@ -1,0 +1,35 @@
+@import '/app/variables.module.scss';
+
+.uploadImages {
+  padding: 10px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  background: $white;
+  filter: drop-shadow(0px 0px 4px $shadow-color);
+  .error {
+    @include errorStyles;
+    bottom: -18px;
+    left: 0;    
+  }
+  .imagesCtn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 6px;
+    margin-top: 8px;
+    .fileInputCtn {
+      position: relative;
+      button.xResetImage {
+        @include flex-center;
+        @include set-width-height(12px, 12px);
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: $white;
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        z-index: 1;
+        box-shadow: 0px 0px 3px 0 $shadow-color;
+      }
+    }
+  }
+}

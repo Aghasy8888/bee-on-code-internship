@@ -1,0 +1,18 @@
+@import '/app/variables.module.scss';
+
+.categoryPanel {
+  padding-top: 45px;
+  padding-bottom: 10px;
+  .container {
+    @include containerStyles;
+    .genderAndAddCategoryCtn {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
+.categoryPanel.AddProductModal {
+  background: $white;
+  padding-top: 30px;
+}

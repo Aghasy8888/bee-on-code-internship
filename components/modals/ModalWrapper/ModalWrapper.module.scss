@@ -1,0 +1,53 @@
+@import '/app/variables.module.scss';
+
+.modalWrapper {
+  right: 0;
+  top: 90px;
+  max-width: 300px;
+  position: absolute;
+  display: block;
+  background: $white;
+  z-index: 2;
+  padding: 20px;
+  border-radius: 5px;
+  @media (max-width: 576px) {
+    top: 140px;
+    left: 3rem;
+  }
+  .titleAndXIcon {
+    display: flex;
+    justify-content: space-between;
+    .modalTitle {
+      @include set-font-size-weight(16px, 600);
+      text-transform: capitalize;
+      color: $black-2;
+    }
+  }
+}
+
+.modalWrapper.subCategory {
+  max-width: unset;
+  min-width: 305px;
+  top: 48px;
+  right: 18px;
+}
+
+.bigContainer {
+  .modalWrapper.product {
+    @include centerModalStyles(50%, 50%);
+    max-width: 860px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .bigContainer {
+    @include modalBigCtnStyles;
+    .modalWrapper,
+    .modalWrapper.subCategory {
+      @include centerModalStyles(50%, 50%);
+      max-width: 345px;
+      min-width: 260px;
+    }
+  }
+}
