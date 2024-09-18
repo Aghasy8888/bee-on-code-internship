@@ -1,7 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Project: Product Category and Subcategory Filtering
+
+## Overview
+
+This Next.js project provides a user interface for creating and managing product categories and subcategories. Users can view a list of all categories and subcategories on the main page. Additionally, users can filter the displayed products by clicking on specific categories or subcategories.
+
+## Features
+
+1. Category Creation: Users can create new product categories.
+2. Subcategory Creation: Users can create subcategories within existing categories.
+3. Category and Subcategory Listing: The main page displays a list of all categories and subcategories.
+4. Product Filtering: Users can filter products by clicking on specific categories or subcategories.
 
 ## Getting Started
 
+## Installation
+
+Clone the repository: 
+
+git clone https://github.com/Aghasy8888/bee-on-code-internship.git
+
+## Install dependencies:
+
+cd bee-on-code-internship
+npm install
+
+## Running the Project
 First, run the development server:
 
 ```bash
